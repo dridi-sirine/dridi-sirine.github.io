@@ -9,8 +9,8 @@ I am an Independant Web Development Consultant.
 Skills:
 
     - Web Development (PHP),
-    - Linux
-    - Test-Driven Infrastructure - TDI
+    - Linux (Ubuntu)
+    - Test-Driven Infrastructure - TDI (Serverspec)
     
 <br /> 
 
