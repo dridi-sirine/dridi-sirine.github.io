@@ -1,0 +1,3 @@
+- name: IoT Sigfox Codec
+  url: https://github.com/dridi-sirine/sigfox-codec
+  tag: IoT Sigfox
