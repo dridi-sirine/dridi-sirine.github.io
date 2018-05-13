@@ -9,6 +9,7 @@ I am an Independant Web Development Consultant.
 Skills:
 
     - Web Development (PHP),
+    - Web Server (Buit-in php -S server, Nginx)
     - Linux (Ubuntu)
     - Test-Driven Infrastructure - TDI (Serverspec)
     

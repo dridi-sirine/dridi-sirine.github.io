@@ -1,3 +1,7 @@
 - name: Compile PHP (Written in c) from github source code
   url: https://github.com/dridi-sirine/compile_php
   tag: PHP C Compilation
+  
+- name: Test Driven LEMP Infrastructure using Serverspec
+  url: https://github.com/dridi-sirine/lemp-tdi
+  tag: TDI lemp Serverspec
