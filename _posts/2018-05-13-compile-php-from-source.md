@@ -11,23 +11,36 @@ tags: [ci, gitlab]
 
 **Goal**
 
-In order to compile a specific version of PHP from source in Github,
+If you've ever wanted to get involved with PHP internals, writing tests is a great way. The tests are written in PHP so you don't even need to know C to get started.
+
+The first step to writing tests for PHP source is downloading and compiling the PHP source code.
+
 As a developer
-I want to be able to compile php code source written in c and install php binary into `/usr/local/bin` linux binary location
+I want to be able to compile php code source written in c and install php binary into `/usr/local/bin` linux binary location.
 
 **Steps**
 
-1. Clone php-src Github repository locally using linux commands as below, don't forget to switch to php-src folder and checkout tag
-`/usr/bin/git clone -b 'php-7.2.5' --single-branch https://github.com/php/php-src.git && cd $(basename $_ .git)`
+1. **Install the dependencies**:You'll need to install a few dependencies as `autoconf` `dpkg-dev` `file` `gcc` `g++` `libc-dev` `make` `pkg-config` `re2c` `ca-certificates` `curl` `xz-utils` `bison` `libxml2-dev`
 
-2. Locate in php-src folder buildconf file and execute this shell script file `./buildconf`
+2. **Clone the php-src repository**:We'll be cloning the code php-src Github repository and switch to php-src folder to checkout tag
+ 
+ `git clone https://github.com/php/php-src.git`
+ 
+ `cd php-src`
+ 
+ `git checkout tags/php-7.2.5`
 
-3. After step 2, we should have a new generated shell script file called configure, launch this script as follow `./configure`
+3. **Configure and make**:Since the repo doesn't contain a configure script, we'll need to build it first and execute this shell script file
+ 
+  `./buildconf`
 
-4. After step 3, we should have a new generated file called Makefile, you have to tape `make` to start compilation
+ we should have a new generated shell script file called configure, launch this script as follow
+  `./configure`
 
-5. Now we have compiled php in the current folder to install php binary in system, tape `sudo make install`
+ we should have a new generated file called Makefile. 
+   
+  Compile the source code with `make`  and install php binary in system by taping `sudo make install`
 
-6. Make sure by taping `/usr/local/bin/php --version` that php is correctly installed globally
+4. **Verifiying installation**:Make sure by taping `/usr/local/bin/php --version` that php is correctly installed globally
 
-Please follow this link [compile_php.sh](https://github.com/dridi-sirine/compile_php)
+Please follow this link [compile_php.sh](https://github.com/dridi-sirine/compile_php).
