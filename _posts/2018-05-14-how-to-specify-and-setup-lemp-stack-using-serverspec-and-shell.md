@@ -34,32 +34,19 @@ _Nginx_
 _MYSQL_
 
   ```
-  describe 'MySQL config parameters' do
-    context mysql_config('innodb-buffer-pool-size') do
-      its(:value) { should > 100000000 }
-    end
-
-    context mysql_config('socket') do
-      its(:value) { should eq '/tmp/mysql.sock' }
-    end
+  describe package('mysql') do
+    it { should be_installed }
+  end
+  describe service('mysql') do
+    it { should be_running }
   end
   ```
 _PHP_
 
   ```
-  describe 'PHP config parameters' do
-    context  php_config('default_mimetype') do
-      its(:value) { should eq 'text/html' }
-    end
-
-    context php_config('session.cache_expire') do
-      its(:value) { should eq 180 }
-    end
-
-    context php_config('mbstring.http_output_conv_mimetypes') do
-      its(:value) { should match /application/ }
-    end
-  end
+   describe package('php') do
+     it { should be_installed }
+   end
   ```
 
 **Provisionning**
