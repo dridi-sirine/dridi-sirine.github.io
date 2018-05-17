@@ -24,11 +24,13 @@ I want to be able to compile php code source written in c and install php binary
 
 2. **Clone the php-src repository**:We'll be cloning the code php-src Github repository and switch to php-src folder to checkout tag
  
- `git clone https://github.com/php/php-src.git`
+ ```
+  git clone https://github.com/php/php-src.git
  
- `cd php-src`
+  cd php-src
  
- `git checkout tags/php-7.2.5`
+  git checkout tags/php-7.2.5
+ ```
 
 3. **Configure and make**:Since the repo doesn't contain a configure script, we'll need to build it first and execute this shell script file
  
